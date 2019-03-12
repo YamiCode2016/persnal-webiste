@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
+import Home from './modules/cv/containers/home/Home';
+import AdminSkelton from './modules/admin/containers/admin/AdminSkelton';
+import C404 from './core/containers/C404/C404';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div>
+        <Switch>
+          <Route path="/admin" component={AdminSkelton} />
+          <Route path="/" exact component={Home} />
+          <Route path="/404" exact component={C404} />
+          <Redirect to="/404"/>
+        </Switch>
+        </div>
+      </BrowserRouter>
     );
   }
 }
