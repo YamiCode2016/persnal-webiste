@@ -69,7 +69,6 @@ class Cv extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
   let socials = []
   let educations = []
   let skills = []

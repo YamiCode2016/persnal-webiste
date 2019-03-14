@@ -1,8 +1,8 @@
-const initState = {
-    info: null,
-}
-const infoReducer = (store = initState, action) => {
-    return store;
-}
+// const initState = {
+//     info: null,
+// }
+// const infoReducer = (store = initState, action) => {
+//     return store;
+// }
 
-export default infoReducer;
+// export default infoReducer;

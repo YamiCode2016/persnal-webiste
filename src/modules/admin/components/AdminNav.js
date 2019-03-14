@@ -1,5 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import { logout } from '../../../store/actions/authAction'
+
 const AdminNav = props => {
   return (
     <nav className='black'>
@@ -13,10 +16,9 @@ const AdminNav = props => {
               <NavLink to='/admin/social'>Social</NavLink>
             </li>
             <li>
-              <NavLink to='/admin/projects'>Projects</NavLink>
-            </li>
-            <li>
-              <NavLink to='/admin/experiences'>Experiences</NavLink>
+              <button className='btn' onClick={props.logout}>
+                Logout
+              </button>
             </li>
           </ul>
           <ul
@@ -39,4 +41,14 @@ const AdminNav = props => {
     </nav>
   )
 }
-export default AdminNav
+
+const mapDispatchToProps = dispatch => {
+  return {
+    logout: () => dispatch(logout())
+  }
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(AdminNav)

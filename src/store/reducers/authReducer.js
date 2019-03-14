@@ -1,9 +1,29 @@
+import { AuthAction } from '../actions/authAction'
+
 const initState = {
-    token: null,
-    user: null
-}
-const authReducer = (store = initState, action) => {
-    return store;
+  authError: null
 }
 
-export default authReducer;
+const authReducer = (state = initState, action) => {
+  switch (action.type) {
+    case AuthAction.LOGIN_ERROR:
+      return {
+        ...state,
+        authError: 'Login Failed'
+      }
+    case AuthAction.LOGIN_SUCCESS:
+      return {
+        ...state,
+        authError: null
+      }
+    case AuthAction.LOGOUT_SUCCESS:
+      return {
+        ...state,
+        authError: null
+      }
+    default:
+      return state
+  }
+}
+
+export default authReducer

@@ -8,6 +8,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root{
+    height: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -468,4 +472,21 @@ body {
     100% {
       transform: rotate(2160deg);
     }
+  }
+
+  .modal{
+    bottom: initial;
+  }
+
+  .modal .row{
+      display: block;
+      width: 100%;
+  }
+
+  .mgr-20{
+      margin-right: 20px!important;
+  }
+
+  .modal h4{
+    border-bottom: 4px solid #26a69a;
   }

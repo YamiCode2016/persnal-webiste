@@ -1,0 +1,186 @@
+.login-main{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100%;
+	background: rgb(59,103,158); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+.login-cnt{
+	padding: 15px;
+	max-width: 100%;
+}
+
+.login{
+	width: 500px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 40px 50px;
+	background-color: #f1f5fc;
+	border-radius: 3px;
+	box-shadow: 0px 0px 12px 12px rgba(49, 49, 49, 0.5);
+}
+.login .title{
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: #4f4f4f;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+.login .form .field{
+	margin-bottom: 20px;
+}
+.login .form label{
+	margin-bottom: 5px;
+	color: #707172;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+/* Customize the label (the container) */
+.login .field .container {
+	padding-top: 5px;
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 0;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-weight: normal;
+	letter-spacing: 0;
+	font-size: 16px;
+}
+
+/* Hide the browser's default checkbox */
+.login .container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.login  .checkmark {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.login .container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.login .container input:checked ~ .checkmark {
+	background-color: #04a9f4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.login .container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.login .container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.login #passwordControl{
+	position: absolute;
+	top: 15%;
+	right: 10px;
+	background-color: #f5f0bc;
+	color: #b3ae74;
+	height: 70%;
+	padding: 2px 15px 0px;
+
+}
+.login .sign-in{
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+	background-color: #0896d7;
+	color: #fff;
+	font-weight: bold;
+	box-shadow: 0px 2px 1px 1px rgba(0, 117, 170, 0.3);
+	border-radius: 3px;
+}
+.login .or{
+	text-align: center;
+	position: relative;
+	margin-bottom: 20px;
+}
+.login .or span{
+	display: inline-block;
+	padding: 0 10px;
+	background-color: #f3f6fe;
+	color: #c6ccd2;
+	z-index: 10;
+	position: relative;
+}
+.login .or:after{
+	position: absolute;
+	top: 10px;
+	background-color: #c6ccd2;
+	height: 2px;
+	width: 100%;
+	left: 0;
+	display: block;
+	content: '';
+}
+.login .social button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48%;
+	border-radius: 3px;
+	color: #fff;
+	padding: 15px 0;
+}
+.login .social .facebook{
+	background-color: #3162a2;
+	box-shadow: 0px 2px 1px 1px rgba(49, 98, 162, 0.3);
+}
+.login .social i{
+	font-size: 30px;
+	margin-right: 5px;
+}
+.login .social .facebook i{
+	color: #6f91be;
+}
+.login .social .twitter{
+	background-color: #00aaf4;
+	box-shadow: 0px 2px 1px 1px rgba(0, 170, 244, 0.3);
+}
+.login .social .twitter i{
+	color: #4dc4f7;
+}
+@media (max-width: 575px){
+	.login{
+		padding: 40px 15px;
+	}
+}
